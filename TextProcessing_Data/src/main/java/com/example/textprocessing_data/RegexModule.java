@@ -10,7 +10,8 @@ public class RegexModule {
         Matcher matcher = pattern.matcher(text);
 
         while (matcher.find()) {
-            System.out.println("Found match: " + matcher.group() + " at position " + matcher.start());
+            if (matcher.groupCount() != 0) {System.out.println("Found match: " + matcher.group() + " at position " + matcher.start());}
+            else {System.out.println("No match: " + matcher.group() + " at position " + matcher.start());}
         }
     }
 

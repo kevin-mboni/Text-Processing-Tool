@@ -12,6 +12,7 @@ public class TextProcessingModule {
         while (matcher.find()) {
             result.append("Found match: ").append(matcher.group()).append(" at position ").append(matcher.start()).append("\n");
         }
+        if(result.isEmpty()) {result.append("Not found");}
         return result.toString();
     }
 

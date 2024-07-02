@@ -21,17 +21,4 @@ public class RegexModule {
         Matcher matcher = pattern.matcher(text);
         return matcher.replaceAll(replacement);
     }
-
-    public static void main(String[] args) {
-        // Sample text and pattern
-        String text = "The quick brown fox jumps over the lazy dog.";
-        String pattern = "\\b[a-z]{4}\\b"; // Words with exactly 4 letters
-
-        // Search for pattern
-        searchPattern(pattern, text);
-
-        // Replace pattern
-        String replacedText = replacePattern(pattern, "****", text);
-        System.out.println("Replaced text: " + replacedText);
-    }
 }
